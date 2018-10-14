@@ -10,11 +10,21 @@ int main()
     while ((c = getchar()) != EOF) {
         
         if (c == ' ') {
-            while ((c = getchar()) == ' ');
             putchar(' ');
+            while ((c = getchar()) == ' ');
+            putchar(c);
+        } else if (c == '\t'){
+            putchar('\\\t');
+        } else if (c == '\b'){
+            putchar('\\\b');
+        } else if (c == '\\'){
+            putchar('\\');
+            putchar('\\');
+        }else{
+            putchar(c);
         }
     
-        putchar(c);
+        
 
     }
 }
