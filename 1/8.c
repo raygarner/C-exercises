@@ -27,6 +27,6 @@ int main()
         }
     }
 
-    printf("\nblanks: %d\ntabs: %d\nline breaks: %d", b, t, nl);
+    printf("\nblanks: %d\ntabs: %d\nline breaks: %d\n", b, t, nl);
 
 }
