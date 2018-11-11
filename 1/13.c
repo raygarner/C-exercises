@@ -6,32 +6,33 @@
 
 int main()
 {
-	int b1, b2, b3, greater, i; //1to3 4to6 7to9 greater
 
-	int c; 
+	char c; 
 
-	b1 = b2 = b3 = greater = i = 0;
+	int b[10];
+	int i = 0;
+
+	for (int j = 0; j < 10; j++) {
+		b[j] = 0;
+
+	}
+
 	
 	while ((c = getchar()) != EOF){
 
 		if (isalpha(c)) {
 			i++;
-		}else{
-			if (1 >= i <= 3) {
-				//1to3++;
-				b1++;
-			}else if (4 >= i <= 6) {
-				//4to6++;
-				b2++;
-			}else if (7 >= i <= 9) {
-				//7to9++;
-				b3++;
-			}else if (i > 9) { //else if used to prevent 0 length words being caught here
-				greater++;
-			}
+		}else{ //if c is not a character
+			b[i]++;	
 			
 			i = 0;
 		}	
 	}
-	printf("\n1 to 3: %d\n4 to 6: %d\n7 to 9: %d\ngreater than 9: %d\n", b1, b2, b3, greater);
+	//printf("\n1 to 3: %d\n4 to 6: %d\n7 to 9: %d\ngreater than 9: %d\n", b1, b2, b3, greater);
+
+	for (int n = 0; n < 10; n++) {
+		printf("length of %d = %d\n", n, b[n]);
+
+	}
+
 }
